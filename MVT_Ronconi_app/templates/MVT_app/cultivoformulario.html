@@ -1,0 +1,22 @@
+{% extends "MVT_app/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Cultivo actual</h1>
+{% endblock %}
+
+{% block contenido_nuevo %}
+<h1> formulario </h1>
+
+<form action="{% url 'cultivoformulario' %}" method="POST"> {% csrf_token %}
+<table>
+
+    {{ form.as_table }}
+
+</table>
+<input type="submit" value="ENVIAR CULTIVO">
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "MVT_app/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Resultado de la busqueda</h1>
+{% endblock %}
+
+{% block contenido_nuevo %}
+
+{% for cultivo in cultivo %}
+    <p>  {{ cultivo.cultivo }}  </p>
+    <p>  {{ cultivo.gremio }}  </p>
+    <p>  {{ cultivo.cosecha }}  </p>
+{% endfor %}
+
+{% endblock %}

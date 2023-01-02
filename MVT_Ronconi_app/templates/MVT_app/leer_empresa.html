@@ -1,0 +1,26 @@
+{% extends "MVT_app/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Listado de empresas</h1>
+
+{% endblock %}
+
+{% block contenido_nuevo %}
+<h2>LISTADO DE EMPRESAS</h2>
+<ul>
+
+    {% for empresa in ESTO_VA %}
+    <li>{{ empresa.razon_social }} - {{ empresa.cuit }} - {{ empresa.gremio }}
+
+    </li>
+    
+    <a class="btn btn-danger" href="{% url 'borrar_empresa' empresa.id %}">Borrar</a>
+    <a class="btn btn-success" href="{% url 'editar_empresa' empresa.id %}">Editar</a>
+
+    {% endfor %}
+
+       
+
+{% endblock %}
