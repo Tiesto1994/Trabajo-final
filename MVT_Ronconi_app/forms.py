@@ -43,8 +43,8 @@ class usereditform(UserCreationForm):
     email = forms.EmailField()
     password1= forms.CharField(label="Ingrese Contraseña", widget=forms.PasswordInput)
     password2= forms.CharField(label="Repita Contraseña", widget=forms.PasswordInput)
-    first_name= forms.charfield("modificar nombre")
-    last_name= forms.charfield("modificar apellido")
+    first_name= forms.CharField(label="modificar nombre")
+    last_name= forms.CharField(label="modificar apellido")
 
     class Meta:
         model = User

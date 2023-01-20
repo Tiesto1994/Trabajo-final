@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MVT_Ronconi_app',
+    'Mercado',
 ]
 
 MIDDLEWARE = [
@@ -55,8 +56,10 @@ ROOT_URLCONF = 'MVT_Ronconi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/gfantin/Desktop/Python/trabajo_final/MVT_Ronconi_app/templates"],
-        'APP_DIRS': True,
+        'DIRS': ["C:/Users/aronconi/Desktop/Ale Ronconi/Python/Entrega final/Trabajo-final/MVT_Ronconi_app/templates",
+        "C:/Users/aronconi/Desktop/Ale Ronconi/Python/Entrega final/Trabajo-final/Mercado/templates",
+        ],
+        "APP_DIRS": True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',

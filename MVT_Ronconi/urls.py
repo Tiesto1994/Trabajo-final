@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('MVT_Ronconi_app/',include ('MVT_Ronconi_app.urls')),
     path('',include ('MVT_Ronconi_app.urls')),
+    path('Mercado/',include ('Mercado.urls')),
 ]
