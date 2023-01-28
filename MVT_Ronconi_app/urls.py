@@ -25,6 +25,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('editarusuario',editarusuario, name='editarusuario'),
     path('agregaravatar',agregaravatar, name='agregaravatar'),
+    path('grupo',grupo, name='grupo'),
 
     
 ]

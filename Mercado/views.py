@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
-@login_required
+
 def ofertaformulario (request):
 
     if request.method=="POST":
@@ -25,15 +25,15 @@ def ofertaformulario (request):
             volumen1=informacion["volumen"]
             cosecha1=informacion["cosecha"]
             
-            gran_compras=oferta(cultivo=cultivo1,volumen=volumen1,cosecha=cosecha1)
-            gran_compras.save()
+            gran_oferta=oferta(cultivo=cultivo1,volumen=volumen1,cosecha=cosecha1)
+            gran_oferta.save()
             return render(request,"MVT_app/inicio.html", {"mensaje":"oferta cargada correctamente"})
     else:
         formulario=ofertaform()
 
 
-    return render(request,"MVT_app/comprasformulario.html", {"form":formulario})
-@login_required
+    return render(request,"Mercado/ofertaformulario.html", {"form":formulario})
+
 def demandaformulario (request):
 
     if request.method=="POST":
@@ -46,8 +46,9 @@ def demandaformulario (request):
             volumen2=informacion["volumen"]
             cosecha2=informacion["cosecha"]
             
-            gran_ventas=demanda(cultivo=cultivo2,volumen=volumen2,cosecha=cosecha2)
-            gran_ventas.save()
+            gran_demanda=demanda(cultivo=cultivo2,volumen=volumen2,cosecha=cosecha2)
+            gran_demanda.save()
             return render(request,"MVT_app/inicio.html",{"mensaje":"su demanda se pidio correctamente"})
     else:
         formulario=demandaform()
+    return render(request,"Mercado/demandaformulario.html", {"form":formulario})

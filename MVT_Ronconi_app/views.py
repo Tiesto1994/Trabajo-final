@@ -27,6 +27,9 @@ def Ventas (request):
 def inicio (request):
     return render(request,"MVT_app/inicio1.html")
 
+def grupo (request):
+    return render(request,"MVT_app/grupo.html")
+
 def inicio2 (request):
     return render(request,"MVT_app/inicio1.html")
 
@@ -163,7 +166,7 @@ def login_request(request):
                 login(request, usuario)
                 return render(request, 'MVT_app/inicio.html', {"el_mensaje":f"Bienvenido {usuario}" })
             else:
-                return render(request, 'MVT_app/login.html', {"el_mensaje":"Usuario o contraseña incorrectos", "form":form})
+                return render(request, 'MVT_app/login.html', {"form":form, "el_mensaje":"Usuario o contraseña incorrectos"})
     else:
         form= AuthenticationForm()
         return render(request, "MVT_app/login.html", {"form":form})
@@ -177,13 +180,13 @@ def register(request):
             username=form.cleaned_data.get("username")
             form.save()
            
-            return render(request, 'MVT_app/inicio.html', {"mensaje":f"Usuario {username} ha sido creado correctamente"})
+            return render(request, 'MVT_app/inicio.html', {"el_mensaje":f"Usuario {username} ha sido creado correctamente"})
         else:
-            return render(request, "MVT_app/login.html", {"form":form, "mensaje":"Error al crear el usuario"})
+            return render(request, "MVT_app/register.html", {"form":form, "el_mensaje":"Error al crear el usuario"})
         
     else:
         form=RegistroUsuarioForm()
-    return render(request, "MVT_app/register.html", {"form":form})
+        return render(request, "MVT_app/register.html", {"form":form})
 
 @login_required
 def editarusuario(request):

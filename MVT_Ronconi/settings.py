@@ -56,8 +56,8 @@ ROOT_URLCONF = 'MVT_Ronconi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/aronconi/Desktop/Ale Ronconi/Python/Entrega final/Trabajo-final/MVT_Ronconi_app/templates",
-        "C:/Users/aronconi/Desktop/Ale Ronconi/Python/Entrega final/Trabajo-final/Mercado/templates",
+        'DIRS': ["C:/Users/Gonzalo/Desktop/Python - Ale/Entrega-intermedia/Trabajo-final/MVT_Ronconi_app/templates",
+        "C:/Users/Gonzalo/Desktop/Python - Ale/Entrega-intermedia/Trabajo-final/Mercado/templates",
         ],
         "APP_DIRS": True,
         'OPTIONS': {
