@@ -8,3 +8,11 @@ Hola Franco te comentamos que el grupo esta compuesto por:
 Entre los 3 realizamos una pagina web en donde se puedan observar y cargar diferentes aspectos del mercado agropecuario. 
 Alejandro desarrollo la primera parte del codigo en donde se encontraban los formularios y las views dentro de la app, Gabriel se encargo de la parte de log in, log out, el registro y poder editar/eliminar los usuarios 
 y la informacion cargada en la base de datos y Matías se encargo del armado de avatar y organizar los templates.
+
+
+
+Admin :
+ Usuario : Franco
+ contraseña : profesor123
+
+ 
