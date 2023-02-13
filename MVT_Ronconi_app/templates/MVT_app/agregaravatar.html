@@ -6,7 +6,7 @@
 <h1 class="mb-5">Agregando Avatar de:: {{ usuario.username }}</h1>
 {% endblock %}
 
-{% block contenido_que_cambia %}
+{% block contenido_nuevo %}
 
 <form action="{% url 'agregarAvatar'  %}" method="POST"  enctype="multipart/form-data"> {% csrf_token %}
 

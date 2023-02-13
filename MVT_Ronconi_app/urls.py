@@ -24,7 +24,7 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('editarusuario',editarusuario, name='editarusuario'),
-    path('agregaravatar',agregaravatar, name='agregaravatar'),
+    path('agregarAvatar',agregaravatar, name='agregarAvatar'),
     path('grupo',grupo, name='grupo'),
 
     
