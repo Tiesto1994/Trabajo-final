@@ -222,3 +222,28 @@ def agregaravatar(request):
     else:
         form=AvatarForm()
         return render(request , "MVT_app/agregaravatar.html", {"formulario": form, "usuario": request.user})
+
+
+def chatconsulta1 (request):
+
+    if request.method=="POST":
+        form=chatconsultaform(request.POST)
+        if form.is_valid():
+            informacion=form.cleaned_data
+
+            Nombre1=informacion["Nombre"]
+            Apellido1=informacion["Apellido"]
+            Telefono1=informacion["Telefono"]
+            Mensaje1=informacion["Mensaje"]
+            
+            gran_chatconsulta=chatconsulta(Nombre=Nombre1,Apellido=Apellido1,Telefono=Telefono1,Mensaje=Mensaje1)
+            gran_chatconsulta.save()
+            return render(request,"MVT_app/inicio.html", {"el_mensaje":"Consulta Enviada"})
+    else:
+        formulario=chatconsultaform()
+    return render(request,"MVT_app/chatconsulta.html", {"form":formulario})
+
+@login_required
+def leer_consulta1(request):
+    consulta_lista=chatconsulta.objects.all()
+    return render(request, "MVT_app/leer_consulta.html", {"ESTO_VA":consulta_lista})

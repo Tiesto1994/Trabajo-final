@@ -27,5 +27,7 @@ urlpatterns = [
     path('agregarAvatar',agregaravatar, name='agregarAvatar'),
     path('grupo',grupo, name='grupo'),
 
+    path('chatconsulta/', chatconsulta1, name="chatconsulta"),
+    path('leer_consulta/', leer_consulta1, name="leer_consulta"),
     
 ]

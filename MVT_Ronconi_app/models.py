@@ -46,3 +46,12 @@ class Avatar(models.Model):
 
     def __str__(self):
         return f"{self.user} - {self.imagen}"
+
+class chatconsulta (models.Model):
+    Nombre=models.CharField(max_length=50)
+    Apellido=models.CharField(max_length=50)
+    Telefono=models.IntegerField()
+    Mensaje=models.CharField(max_length=500)
+    
+ 
+      

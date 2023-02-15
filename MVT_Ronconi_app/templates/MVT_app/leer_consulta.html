@@ -1,0 +1,25 @@
+{% extends "MVT_app/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Consultas Realizadas</h1>
+
+{% endblock %}
+
+{% block contenido_nuevo %}
+<h2>LISTADO DE CONSULTAS</h2>
+<ul>
+
+    {% for chatconsulta in ESTO_VA %}
+    <li>{{ chatconsulta.Nombre }} - {{ chatconsulta.Apellido }} - {{ chatconsulta.Mensaje}} 
+
+    </li>
+    
+   
+
+    {% endfor %}
+
+       
+
+{% endblock %}

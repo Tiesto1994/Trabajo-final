@@ -53,3 +53,10 @@ class usereditform(UserCreationForm):
 
 class AvatarForm(forms.Form):
     imagen=forms.ImageField(label="Imagen")
+
+class chatconsultaform(forms.Form):
+    Nombre=forms.CharField(max_length=50)
+    Apellido=forms.CharField(max_length=50)
+    Telefono=forms.IntegerField()
+    Mensaje=forms.CharField(max_length=500)
+   
