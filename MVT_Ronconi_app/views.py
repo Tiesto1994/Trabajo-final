@@ -25,7 +25,13 @@ def Ventas (request):
     return render(request,"MVT_app/venta.html")
 
 def inicio (request):
-    return render(request,"MVT_app/inicio1.html")
+    lista=Avatar.objects.filter(user=request.user)
+    if len(lista)!=0:
+        imagen=lista[0]
+    else:
+        imagen=None
+    return render (request,"MVT_app/inicio1.html", {"imagen":imagen})
+    
 
 def grupo (request):
     return render(request,"MVT_app/grupo.html")
