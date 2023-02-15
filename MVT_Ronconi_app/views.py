@@ -23,7 +23,7 @@ def Compras (request):
 
 def Ventas (request):
     return render(request,"MVT_app/venta.html")
-
+@login_required
 def inicio (request):
     lista=Avatar.objects.filter(user=request.user)
     if len(lista)!=0:
